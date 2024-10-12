@@ -1,0 +1,256 @@
+@font-face {
+    font-family: 'BorisBlackBloxx';
+    src: url('borisblackbloxx-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background: linear-gradient(to bottom, #484639, #908E82);
+    background-attachment: fixed;
+    background-size: cover;
+    font-size: 23;
+    font-family: 'BorisBlackBloxx', sans-serif;
+}
+
+.tit {
+    color: #EDE5D8;
+    position: absolute;
+    top: -45;
+    left: 0;
+    font-size: 50;
+}
+
+.tit2 {
+    color: #EDE5D8;
+    position: absolute;
+    top: 40;
+    right: 1080;
+    font-size: 20;
+}
+
+.logo {
+    margin-right: 15;
+}
+
+.navbar {
+    background: linear-gradient(to bottom, black, #3A342E);
+    display: flex;
+    position: fixed;
+    z-index: 100;
+    padding: 20;
+    left: 0;
+    right: 0;
+    top: 0;
+    justify-content: flex-end;
+}
+
+.navbar a {
+    color: #EDE5D8;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+}
+
+.footer {
+    background: linear-gradient(to bottom, #3A342E, black);
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -600;
+    text-align: center;
+    font-size: 22;
+    color: white
+}
+
+.items {
+    display: flex;
+    gap: 20px;
+}
+
+/* Content Section Styling */
+.content-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    background-color: #EDE5D8;
+    max-width: 1200px;
+    margin: 150px auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.content-section:hover {
+    transform: translateY(-10px);
+}
+
+/* Image Styling */
+.content-image img {
+    width: 100%;
+    max-width: 600px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.content-section:hover .content-image img {
+    transform: scale(1.05);
+}
+
+/* Text Content Styling */
+.content-text {
+    padding: 20px;
+    max-width: 600px;
+    text-align: left;
+}
+
+.content-text h2 {
+    margin-top: 0;
+    font-size: 28px;
+    color: #333;
+}
+
+.content-text p {
+    font-size: 16px;
+    color: #555;
+    margin: 20px 0;
+}
+
+/* Button Styling */
+.cta-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #ff7e5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #feb47b;
+}
+
+/* Responsive Design for Smaller Screens */
+@media (max-width: 768px) {
+    .content-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .content-image img {
+        max-width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .content-text {
+        text-align: center;
+    }
+}
+
+/* Container for all cards */
+.card-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 50px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Card Styling */
+.card {
+    background-color: #EDE5D8;
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    width: 300px;
+    bottom: 50;
+    text-align: center;
+    position: relative;
+}
+
+/* Hover Effect */
+.card:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2); 
+}
+
+/* Card Image Styling */
+.card-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+/* Hover Effect on the image */
+.card:hover .card-image {
+    transform: scale(1.1); 
+}
+
+/* Card Content Styling */
+.card-content {
+    padding: 20px;
+}
+
+/* Card Title Styling */
+.card-content h2 {
+    margin: 0;
+    font-size: 24px;
+    color: #333;
+}
+
+/* Card Description */
+.card-content p {
+    color: #777;
+    font-size: 16px;
+    margin: 10px 0 20px;
+}
+
+/* Card Button Styling */
+.card-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #ff7e5f;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+/* Button Hover Effect */
+.card-button:hover {
+    background-color: #feb47b; 
+}
+
+/* Fade-in Effect */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation to Each Card */
+.card {
+    animation: fadeIn 0.5s ease both;
+}
